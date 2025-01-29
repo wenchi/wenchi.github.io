@@ -23,8 +23,8 @@ taxonomies = [
 ]
 
 [languages.en]
-title = "Anatole"
-description = "A other zola theme"
+title = "Ken's Tech Blog"
+description = "Something valuable and inspiring"
 generate_feeds = true
 taxonomies = [
     {name = "tags"},
