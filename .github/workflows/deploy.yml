@@ -23,7 +23,9 @@ jobs:
           mv zola /usr/local/bin/
 
       - name: Build site
-        run: zola build
+        run: |
+          zola build
+          ls -al public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
