@@ -178,6 +178,7 @@ img {
 
     .avatar {
       display: none;
+      visibility: hidden;
 
       @media screen and (min-width: 520px) {
         display: block;
@@ -241,6 +242,7 @@ img {
     }
 
     .back_btn {
+      visibility: hidden;
       float: left;
       padding-top: 7px;
       cursor: pointer;
