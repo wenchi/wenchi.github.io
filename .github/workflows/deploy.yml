@@ -1,0 +1,29 @@
+name: Deploy Zola to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 這裡設定要觸發部署的分支（請確保你的主要分支是 main 或 master）
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Zola
+        run: |
+          curl -s -L https://github.com/getzola/zola/releases/download/v0.19.2/zola-v0.19.2-x86_64-unknown-linux-gnu.tar.gz | tar xz
+          chmod +x zola
+          mv zola /usr/local/bin/
+
+      - name: Build site
+        run: zola build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Zola 產生的靜態網站資料夾
