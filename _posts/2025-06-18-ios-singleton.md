@@ -1,6 +1,6 @@
 ---
 title: "關於 iOS 的 Singleton 及實作方式"
-date: 2025-06-15 10:00:00 +0800
+date: 2025-06-18 10:00:00 +0800
 categories: [iOS, Design Patterns]
 tags: [Singleton, Swift, Objective-C, Thread Safety, GCD, dispatch_once, Design Patterns]
 ---
